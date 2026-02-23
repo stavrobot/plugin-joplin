@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from helpers import load_config
+from helpers import load_config, DateTimeEncoder
 
 import requests
 
@@ -42,7 +42,7 @@ def main() -> None:
             break
         page += 1
 
-    json.dump({"tags": tags}, sys.stdout)
+    json.dump({"tags": tags}, sys.stdout, cls=DateTimeEncoder)
 
 
 main()

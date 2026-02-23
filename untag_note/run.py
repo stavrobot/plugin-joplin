@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from helpers import load_config
+from helpers import load_config, DateTimeEncoder
 
 import requests
 
@@ -27,7 +27,7 @@ def main() -> None:
         params={"token": token},
     )
     response.raise_for_status()
-    json.dump({"success": True}, sys.stdout)
+    json.dump({"success": True}, sys.stdout, cls=DateTimeEncoder)
 
 
 main()

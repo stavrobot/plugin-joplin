@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from helpers import get_client
+from helpers import get_client, DateTimeEncoder
 
 
 def main() -> None:
@@ -35,6 +35,7 @@ def main() -> None:
             }
         },
         sys.stdout,
+        cls=DateTimeEncoder,
     )
 
 

@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from helpers import get_client
+from helpers import get_client, DateTimeEncoder
 
 
 def main() -> None:
@@ -21,7 +21,7 @@ def main() -> None:
         kwargs["parent_id"] = params["parent_id"]
 
     notebook_id = api.add_notebook(**kwargs)
-    json.dump({"notebook_id": notebook_id}, sys.stdout)
+    json.dump({"notebook_id": notebook_id}, sys.stdout, cls=DateTimeEncoder)
 
 
 main()

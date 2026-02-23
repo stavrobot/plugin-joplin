@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from helpers import get_client
+from helpers import get_client, DateTimeEncoder
 
 # Joplin internal links use the ":/" prefix before the note ID.
 INTERNAL_LINK_PATTERN = re.compile(r"\[(?:[^\]]*)\]\(:\/([a-f0-9]+)\)")
@@ -31,6 +31,7 @@ def main() -> None:
     json.dump(
         {"internal_links": internal_links, "external_links": external_links},
         sys.stdout,
+        cls=DateTimeEncoder,
     )
 
 

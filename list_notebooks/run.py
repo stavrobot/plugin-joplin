@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from helpers import get_client
+from helpers import get_client, DateTimeEncoder
 
 
 def main() -> None:
@@ -21,7 +21,7 @@ def main() -> None:
         {"id": notebook.id, "title": notebook.title, "parent_id": notebook.parent_id}
         for notebook in notebooks_raw
     ]
-    json.dump({"notebooks": notebooks}, sys.stdout)
+    json.dump({"notebooks": notebooks}, sys.stdout, cls=DateTimeEncoder)
 
 
 main()

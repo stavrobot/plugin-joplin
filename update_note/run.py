@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from helpers import get_client
+from helpers import get_client, DateTimeEncoder
 
 
 def main() -> None:
@@ -26,7 +26,7 @@ def main() -> None:
         kwargs["is_todo"] = 1 if params["is_todo"] else 0
 
     api.modify_note(id_=note_id, **kwargs)
-    json.dump({"success": True}, sys.stdout)
+    json.dump({"success": True}, sys.stdout, cls=DateTimeEncoder)
 
 
 main()

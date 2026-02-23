@@ -3,9 +3,17 @@
 # ///
 
 import json
+from datetime import datetime
 from pathlib import Path
 
 from joppy.client_api import ClientApi
+
+
+class DateTimeEncoder(json.JSONEncoder):
+    def default(self, obj: object) -> object:
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        return super().default(obj)
 
 
 def load_config() -> dict:
