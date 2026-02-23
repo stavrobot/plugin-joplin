@@ -1,6 +1,6 @@
 #!/usr/bin/env -S uv run
 # /// script
-# dependencies = ["requests"]
+# dependencies = ["joppy", "requests"]
 # ///
 
 import json
