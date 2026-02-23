@@ -1,6 +1,6 @@
 #!/usr/bin/env -S uv run
 # /// script
-# dependencies = ["joppy"]
+# dependencies = ["requests"]
 # ///
 
 import json
@@ -8,7 +8,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from helpers import get_client
+from helpers import load_config
+
+import requests
 
 
 def main() -> None:
@@ -16,10 +18,15 @@ def main() -> None:
     tag_id = params["tag_id"]
     note_id = params["note_id"]
 
-    api = get_client()
-    # joppy's delete_tag accepts an optional note_id to remove the tag from a
-    # specific note without deleting the tag itself.
-    api.delete_tag(id_=tag_id, note_id=note_id)
+    config = load_config()
+    base_url = config.get("joplin_url", "http://localhost:41184")
+    token = config["joplin_token"]
+
+    response = requests.delete(
+        f"{base_url}/tags/{tag_id}/notes/{note_id}",
+        params={"token": token},
+    )
+    response.raise_for_status()
     json.dump({"success": True}, sys.stdout)
 
 
