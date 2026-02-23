@@ -1,0 +1,6 @@
+{
+  "name": "list_tags",
+  "description": "List all tags in Joplin.",
+  "entrypoint": "run.py",
+  "parameters": {}
+}

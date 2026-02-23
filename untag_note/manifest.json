@@ -1,0 +1,15 @@
+{
+  "name": "untag_note",
+  "description": "Remove a tag from a note.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "tag_id": {
+      "type": "string",
+      "description": "The ID of the tag to remove."
+    },
+    "note_id": {
+      "type": "string",
+      "description": "The ID of the note to untag."
+    }
+  }
+}

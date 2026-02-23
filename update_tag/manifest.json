@@ -1,0 +1,15 @@
+{
+  "name": "update_tag",
+  "description": "Update a tag's title.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "tag_id": {
+      "type": "string",
+      "description": "The ID of the tag to update."
+    },
+    "title": {
+      "type": "string",
+      "description": "The new title for the tag."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "tag_note",
+  "description": "Attach a tag to a note.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "tag_id": {
+      "type": "string",
+      "description": "The ID of the tag to attach."
+    },
+    "note_id": {
+      "type": "string",
+      "description": "The ID of the note to tag."
+    }
+  }
+}

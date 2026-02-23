@@ -1,0 +1,11 @@
+{
+  "name": "find_notes_with_tag",
+  "description": "Find all notes that have a specific tag.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "tag_id": {
+      "type": "string",
+      "description": "The ID of the tag to filter notes by."
+    }
+  }
+}

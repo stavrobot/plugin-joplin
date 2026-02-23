@@ -1,0 +1,6 @@
+{
+  "name": "get_all_notes",
+  "description": "List all notes in Joplin.",
+  "entrypoint": "run.py",
+  "parameters": {}
+}

@@ -1,0 +1,6 @@
+{
+  "name": "list_notebooks",
+  "description": "List all notebooks in Joplin.",
+  "entrypoint": "run.py",
+  "parameters": {}
+}

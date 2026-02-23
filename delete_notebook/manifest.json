@@ -1,0 +1,11 @@
+{
+  "name": "delete_notebook",
+  "description": "Delete a notebook by ID.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "notebook_id": {
+      "type": "string",
+      "description": "The ID of the notebook to delete."
+    }
+  }
+}

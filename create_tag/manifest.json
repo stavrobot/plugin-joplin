@@ -1,0 +1,11 @@
+{
+  "name": "create_tag",
+  "description": "Create a new tag in Joplin.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "title": {
+      "type": "string",
+      "description": "The title of the new tag."
+    }
+  }
+}

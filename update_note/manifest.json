@@ -1,0 +1,23 @@
+{
+  "name": "update_note",
+  "description": "Update an existing note. Only overwrites fields that are provided.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "note_id": {
+      "type": "string",
+      "description": "The ID of the note to update."
+    },
+    "title": {
+      "type": "string",
+      "description": "New title for the note (optional)."
+    },
+    "body": {
+      "type": "string",
+      "description": "New body content for the note (optional)."
+    },
+    "is_todo": {
+      "type": "boolean",
+      "description": "Whether this note is a todo/checkbox note (optional)."
+    }
+  }
+}

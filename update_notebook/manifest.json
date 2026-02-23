@@ -1,0 +1,15 @@
+{
+  "name": "update_notebook",
+  "description": "Update a notebook's title.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "notebook_id": {
+      "type": "string",
+      "description": "The ID of the notebook to update."
+    },
+    "title": {
+      "type": "string",
+      "description": "The new title for the notebook."
+    }
+  }
+}

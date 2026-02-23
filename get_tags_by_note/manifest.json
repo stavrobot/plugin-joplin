@@ -1,0 +1,11 @@
+{
+  "name": "get_tags_by_note",
+  "description": "Get all tags attached to a specific note.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "note_id": {
+      "type": "string",
+      "description": "The ID of the note to get tags for."
+    }
+  }
+}

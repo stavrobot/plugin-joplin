@@ -1,0 +1,23 @@
+{
+  "name": "create_note",
+  "description": "Create a new note in Joplin.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "title": {
+      "type": "string",
+      "description": "The title of the new note."
+    },
+    "body": {
+      "type": "string",
+      "description": "The body content of the new note (optional, defaults to empty)."
+    },
+    "notebook_id": {
+      "type": "string",
+      "description": "The ID of the parent notebook (optional)."
+    },
+    "is_todo": {
+      "type": "boolean",
+      "description": "Whether this note is a todo/checkbox note (optional)."
+    }
+  }
+}

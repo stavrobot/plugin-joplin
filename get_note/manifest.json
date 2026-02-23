@@ -1,0 +1,11 @@
+{
+  "name": "get_note",
+  "description": "Get a single note by ID, including its full body content.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "note_id": {
+      "type": "string",
+      "description": "The ID of the note to retrieve."
+    }
+  }
+}

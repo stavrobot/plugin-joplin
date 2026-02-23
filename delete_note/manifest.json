@@ -1,0 +1,11 @@
+{
+  "name": "delete_note",
+  "description": "Delete a note by ID.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "note_id": {
+      "type": "string",
+      "description": "The ID of the note to delete."
+    }
+  }
+}

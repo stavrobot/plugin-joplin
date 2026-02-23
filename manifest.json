@@ -1,0 +1,14 @@
+{
+  "name": "joplin",
+  "description": "Manage notes, notebooks, and tags in Joplin.",
+  "config": {
+    "joplin_token": {
+      "description": "Joplin API token (from Joplin settings > Web Clipper)",
+      "required": true
+    },
+    "joplin_url": {
+      "description": "Joplin API base URL (e.g. http://localhost:41184)",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "delete_tag",
+  "description": "Delete a tag by ID.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "tag_id": {
+      "type": "string",
+      "description": "The ID of the tag to delete."
+    }
+  }
+}

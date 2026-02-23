@@ -1,0 +1,11 @@
+{
+  "name": "find_notes_in_notebook",
+  "description": "Find all notes in a specific notebook.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "notebook_id": {
+      "type": "string",
+      "description": "The ID of the notebook to list notes from."
+    }
+  }
+}

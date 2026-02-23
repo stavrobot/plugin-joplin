@@ -1,0 +1,11 @@
+{
+  "name": "get_note_links",
+  "description": "Extract markdown links and Joplin internal note references from a note's body.",
+  "entrypoint": "run.py",
+  "parameters": {
+    "note_id": {
+      "type": "string",
+      "description": "The ID of the note to extract links from."
+    }
+  }
+}
